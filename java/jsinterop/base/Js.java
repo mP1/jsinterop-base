@@ -171,7 +171,7 @@ public final class Js {
     return !isFalsy(obj);
   }
 
-  // J2CL_ONLY @JsMethod
+  @JsMethod
   @HasNoSideEffects
   public static native boolean isFalsy(@DoNotAutobox Object obj) /*-{
     return !obj;
@@ -183,7 +183,7 @@ public final class Js {
    * <p>This method mostly behaves similar to Java {@code ==} operator except that it doesn't return
    * {@code true} for {@code null==undefined} comparison.
    */
-  // J2CL_ONLY @JsMethod
+  @JsMethod
   @HasNoSideEffects
   public static native boolean isTripleEqual(
       @DoNotAutobox Object o1, @DoNotAutobox Object o2) /*-{
@@ -191,7 +191,7 @@ public final class Js {
   }-*/;
 
   /** Coerces any object to number using {@code +} operation. */
-  // J2CL_ONLY @JsMethod
+  @JsMethod
   public static native double coerceToDouble(Object d) /*-{
     return +d;
   }-*/;
