@@ -45,6 +45,9 @@ public final class Js {
   @HasNoSideEffects
   public static native String typeof(Object obj);
 
+  @JsMethod(namespace = "<window>", name = "throw")
+  public static native void throw_(Object obj);
+
   //J2CL_ONLY @JsProperty(namespace="goog", name = "global")
   public static native JsPropertyMap<Object> global() /*-{
     return $wnd;

@@ -45,6 +45,17 @@ public class JsTest extends GWTTestCase {
     assertThat(Js.typeof(new Object())).isEqualTo("object");
   }
 
+  public void testThrow() {
+    boolean threw = false;
+    try {
+      Js.throw_("something happened");
+    } catch (Throwable t) {//testing for any throwable at all, since j2cl may throw something else
+      threw = true;
+      assertThat(t).hasMessageThat().contains("something happened");
+    }
+    assertThat(threw).isTrue();
+  }
+
   public void testUncheckedCast() {
     String unused = Js.uncheckedCast(3.5);
   }
