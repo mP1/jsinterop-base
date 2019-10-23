@@ -8,9 +8,9 @@
     <version>7</version>
   </parent>
 
-  <groupId>com.vertispan.jsinterop</groupId>
-  <artifactId>base</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
+  <groupId>walkingkooka</groupId>
+  <artifactId>jsinterop-base</artifactId>
+  <version>1.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>JsInterop Base</name>
@@ -21,8 +21,13 @@
     <dependency>
       <groupId>com.google.jsinterop</groupId>
       <artifactId>jsinterop-annotations</artifactId>
-      <version>1.0.2</version>
+      <version>2.0.0</version>
     </dependency>
+    <dependency>
+      <groupId>com.vertispan.j2cl</groupId>
+      <artifactId>gwt-internal-annotations</artifactId>
+      <version>0.4-SNAPSHOT</version>
+    </dependency>  
   </dependencies>
   <build>
     <plugins>
