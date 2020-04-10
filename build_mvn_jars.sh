@@ -18,6 +18,7 @@ pushd "${tmp_directory}"
 jar xf "${bazel_root}/bazel-bin/java/jsinterop/base/libbase.jar"
 jar xf "${bazel_root}/bazel-bin/java/jsinterop/base/libbase-src.jar"
 
+touch .walkingkooka-j2cl-maven-plugin-classpath-required.txt
 jar cf "${bazel_root}/maven/jsinterop-base.jar" .
 #TODO also build source jar
 
